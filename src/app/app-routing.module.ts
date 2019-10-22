@@ -10,7 +10,7 @@ import { DashboardComponent } from './menu/dashboard/dashboard.component';
 
 const routes: Routes = [
    {path: 'dashboard', component: DashboardComponent},
-   {path: 'products', component: ProductsComponent},
+   {path: 'Table', component: ProductsComponent},
    {path:'dataproducts',component:DataproductsComponent},
   //  {path:'ProReslover',resolve:{pdata:ProductresloverServService},component:ProductresolverComponent},
 ];
