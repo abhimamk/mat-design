@@ -16,7 +16,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UsersModule } from './menu/users/users.module';
-// import { ProductresolverComponent } from './productresolver/productresolver.component';
+import { ProductaddComponent } from './menu/productadd/productadd.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { UsersModule } from './menu/users/users.module';
     ProductsComponent,
     DataproductsComponent,
     SidebarComponent,
-    // ProductresolverComponent
+    ProductaddComponent,
 
   ],
   imports: [
@@ -52,6 +52,7 @@ import { UsersModule } from './menu/users/users.module';
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ProductaddComponent]
 })
 export class AppModule { }

@@ -14,7 +14,8 @@ import {
     MatSelectModule,
     MatMenuModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -37,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         ReactiveFormsModule,
         MatInputModule,
         MatCheckboxModule,
+        MatDialogModule,
     ],
     exports: [
         MatToolbarModule,
@@ -55,6 +57,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         ReactiveFormsModule,
         MatInputModule,
         MatCheckboxModule,
+        MatDialogModule,
     ]
   })
   export class MaterialModule { }
