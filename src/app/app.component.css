@@ -1,0 +1,9 @@
+.float {
+  margin-left: 45%;
+}
+.uploader-status ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #000000;
+}
+.app-progress-bar {
+  width: 400px !important;
+}

@@ -1,0 +1,85 @@
+<mat-toolbar id="mainToolbar"  style="background-image:url('https://image.freepik.com/free-vector/yellow-light-line-shadow-dark-grey-luxury-background_33869-978.jpg') ;">
+  <mat-icon
+  (click)='sidenav.toggle()'
+    id="toolbarMenu">subject</mat-icon>
+  AMK
+  <span class="toolbar-spacer"></span>
+  <mat-icon
+    class="toolbar-icon"
+    matBadge="8"
+    matBadgePosition="after"
+    matBadgeColor="accent"
+  >notifications</mat-icon>
+</mat-toolbar>
+
+<mat-sidenav-container
+
+  id="sidenavContainer"
+ fullscreen>
+  <mat-sidenav
+    mode="side"
+    #sidenav
+    id="sidenav"
+    [class.menu-open]="isMenuOpen"
+    [class.menu-close]="!isMenuOpen"
+    opened>
+
+    <mat-list id="menus">
+      <mat-card>
+        <mat-card-header>
+          <div
+            mat-card-avatar
+            class="avatar"></div>
+
+          <mat-card-title>AbhiWebSite</mat-card-title>
+          <mat-card-subtitle>AMK</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <mat-list-item>
+        <button (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="dashboard"
+        class="menu-item"
+          mat-flat-button>
+          <mat-icon>dashboard</mat-icon>
+        Dashboard</button>
+
+      </mat-list-item>
+
+      <mat-list-item>
+          <button (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="products"
+          class="menu-item"
+            mat-flat-button>
+            <mat-icon>work</mat-icon>
+          Table</button>
+
+        </mat-list-item>
+
+         <mat-list-item>
+            <button   routerLinkActive="active"  routerLink="dataproducts"
+            class="menu-item"
+              mat-flat-button>
+              <mat-icon>rounded_corner</mat-icon>
+              products</button>
+
+          </mat-list-item>
+
+          <mat-list-item>
+            <button   routerLinkActive="active"  routerLink="ProReslover"
+            class="menu-item"
+              mat-flat-button>
+              <mat-icon>rounded_corner</mat-icon>
+            Resolver</button>
+
+          </mat-list-item>
+          <mat-list-item>
+            <button   routerLinkActive="active"  routerLink="userreslover"
+            class="menu-item"
+              mat-flat-button>
+              <mat-icon>rounded_corner</mat-icon>
+            user</button>
+
+          </mat-list-item>
+
+    </mat-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

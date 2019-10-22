@@ -1,0 +1,20 @@
+<div class="container-fliud">
+   <div class="col-md-9">
+    <h1 style="color: rgb(49, 226, 43);">Product Display</h1>
+    <div class="row">
+      <div class="col-sm-4 col-md-4" *ngFor="let item of arr">
+        <div class="thumbnail">
+          <img [src]="item.pro_img" height="200px" width="200px" alt="...">
+          <div class="caption">
+            <h3>{{item.pro_name}}</h3>
+            <p>{{item.pro_desc}}</p>
+            <p>{{item.pro_qty}}</p>
+            <p>{{item.pro_mfg}}</p>
+            <p>{{item.pro_price | currency:'INR' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
