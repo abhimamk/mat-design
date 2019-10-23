@@ -31,6 +31,7 @@ export class DataproductsComponent implements OnInit {
   openLoginForm()
   {
     this.dialog.open(ProductaddComponent,{width:'1000px', height:'550px'})
+    console.log("click");
   }
   onProductDelete(item: Product) {
     this._data.deleteProduct(item.pro_id).subscribe((data: any) => {

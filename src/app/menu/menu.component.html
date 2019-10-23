@@ -54,7 +54,7 @@
         </mat-list-item>
 
          <mat-list-item>
-            <button   routerLinkActive="active"  routerLink="dataproducts"
+            <button  (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="dataproducts"
             class="menu-item"
               mat-flat-button>
               <mat-icon>rounded_corner</mat-icon>
@@ -63,7 +63,7 @@
           </mat-list-item>
 
           <mat-list-item>
-            <button   routerLinkActive="active"  routerLink="ProReslover"
+            <button (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="ProReslover"
             class="menu-item"
               mat-flat-button>
               <mat-icon>rounded_corner</mat-icon>
@@ -71,7 +71,7 @@
 
           </mat-list-item>
           <mat-list-item>
-            <button   routerLinkActive="active"  routerLink="userreslover"
+            <button  (click)='sidenav.toggle()' routerLinkActive="active"  routerLink="userreslover"
             class="menu-item"
               mat-flat-button>
               <mat-icon>rounded_corner</mat-icon>

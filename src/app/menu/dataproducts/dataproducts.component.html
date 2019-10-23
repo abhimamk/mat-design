@@ -1,31 +1,31 @@
-  <span class="flex-spacer"></span>
-  <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> ADD</a>
+<span class="flex-spacer"></span>
+<a mat-button (click)="openLoginForm()" style="color: blanchedalmond;"><span class="fa fa-sign-in fa-lg"></span> ADD</a>
 <div class="container-fliud">
-  <div class="col-md-3">
-    <app-sidebar [categoryName]="name" (jinal)="onSideBarClick($event)"></app-sidebar>
-  </div>
-  <div>
-  </div>
-  <div class="col-md-12">
+<div class="col-md-3">
+  <app-sidebar [categoryName]="name" (jinal)="onSideBarClick($event)"></app-sidebar>
+</div>
+<div>
+</div>
+<div class="col-md-12">
 
-    <div class="row">
+  <div class="row">
 
-      <div class="col-sm-6 col-md-3" *ngFor="let item of arr">
-        <div class="thumbnail">
-          <img [src]="item.pro_img" height="200px" width="200px" alt="...">
-          <div class="caption">
-            <h3>{{item.pro_name}}</h3>
-            <p>{{item.pro_desc}}</p>
-            <p>{{item.pro_qty}}</p>
-            <p>{{item.pro_mfg}}</p>
-            <p>{{item.pro_price | currency:'INR' }}</p>
-            <p>
-              <a (click)="onProductDelete(item)" class="btn btn-primary" role="button">Delete</a>
-              <a (click)="onProductEdit(item)" class="btn btn-primary" role="button">Edit</a>
-            </p>
-          </div>
+    <div class="col-sm-6 col-md-3" *ngFor="let item of arr">
+      <div class="thumbnail">
+        <img [src]="item.pro_img" height="200px" width="200px" alt="...">
+        <div class="caption">
+          <h3>{{item.pro_name}}</h3>
+          <p>{{item.pro_desc}}</p>
+          <p>{{item.pro_qty}}</p>
+          <p>{{item.pro_mfg}}</p>
+          <p>{{item.pro_price | currency:'INR' }}</p>
+          <p>
+            <a (click)="onProductDelete(item)" class="btn btn-primary" role="button">Delete</a>
+            <a (click)="onProductEdit(item)" class="btn btn-primary" role="button">Edit</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
