@@ -78,7 +78,8 @@
             user</button>
 
           </mat-list-item>
-
+          <!-- <li *ngIf="!isLoggedIn()" routerLinkActive="active"><a  routerLink="/login">Login</a></li>
+          <li *ngIf="isLoggedIn()" routerLinkActive="active"><a (click)="onLogOut()" >Log Out</a></li> -->
     </mat-list>
   </mat-sidenav>
   <router-outlet></router-outlet>
