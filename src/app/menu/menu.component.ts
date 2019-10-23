@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { UserdataService } from '../services/userdata.service';
 
 @Component({
   selector: 'app-menu',
@@ -20,9 +22,16 @@ export class MenuComponent implements OnInit {
       this.contentMargin = 240;
     }
   }
-  constructor() { }
+  constructor(private _userdata:UserdataService,private _r:Router) { }
 
   ngOnInit() {
+  }
+  onLogOut(){
+    this._userdata.logout();
+    this._r.navigate(['/login']);
+  }
+  isLoggedIn(){
+    return this._userdata.isLoggedIn;
   }
 
 }

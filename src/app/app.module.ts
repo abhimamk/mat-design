@@ -18,7 +18,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UsersModule } from './menu/users/users.module';
 import { ProductaddComponent } from './menu/productadd/productadd.component';
 import { EditproductComponent } from './menu/editproduct/editproduct.component';
-
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+import { LoginComponent } from './menu/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { EditproductComponent } from './menu/editproduct/editproduct.component';
     SidebarComponent,
     ProductaddComponent,
     EditproductComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -41,7 +43,7 @@ import { EditproductComponent } from './menu/editproduct/editproduct.component';
     UsersModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-
+    NgMatSearchBarModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 100,
