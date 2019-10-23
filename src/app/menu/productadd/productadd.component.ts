@@ -1,6 +1,6 @@
+import { Product } from './../../classes/product';
 import { GetservService } from './../../services/getserv.service';
-import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/classes/product';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 
 @Component({
@@ -10,13 +10,21 @@ import { MatDialogRef } from '@angular/material';
 })
 export class ProductaddComponent implements OnInit {
   arr: Product[] = [];
+  y:Product[]=[];
+  @Output() emit1=new EventEmitter();
   constructor(private _data:GetservService, private dialogRef: MatDialogRef<ProductaddComponent>,) { }
 
   ngOnInit() {}
   onSaveProduct(f) {
     this._data.addProduct(f.value).subscribe((data: any) => {
       this.dialogRef.close(f.value);
+       window.location.reload();
       console.log(data);
+      // this._data.getAllProducts().subscribe((x:any)=>{
+      //   this.y=x;
+      //   this.emit1.emit(this.y);
+      //   console.log(this.y);
+      // })
     });
   }
 }

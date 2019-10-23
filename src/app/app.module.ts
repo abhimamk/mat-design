@@ -17,6 +17,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UsersModule } from './menu/users/users.module';
 import { ProductaddComponent } from './menu/productadd/productadd.component';
+import { EditproductComponent } from './menu/editproduct/editproduct.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductaddComponent } from './menu/productadd/productadd.component';
     DataproductsComponent,
     SidebarComponent,
     ProductaddComponent,
+    EditproductComponent,
 
   ],
   imports: [
@@ -39,6 +41,7 @@ import { ProductaddComponent } from './menu/productadd/productadd.component';
     UsersModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 100,
@@ -53,6 +56,6 @@ import { ProductaddComponent } from './menu/productadd/productadd.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ProductaddComponent]
+  entryComponents: [ProductaddComponent,EditproductComponent]
 })
 export class AppModule { }

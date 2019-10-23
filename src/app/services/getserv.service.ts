@@ -9,13 +9,19 @@ export class GetservService {
   constructor(private _http: HttpClient) {}
 
   getAllProducts() {
+   let x=this._http.get(this.url);
+   console.log("X"+x);
     return this._http.get(this.url);
   }
 
 
-  getProductById(pro_id) {
+  getProductById(pro_id:number) {
+    console.log(pro_id);
+    let x=this._http.get(this.url+pro_id);
+    console.log(x);
     return this._http.get(this.url+pro_id);
   }
+
   addProduct(item) {
     let body = JSON.stringify(item);
     let head = new HttpHeaders().set("Content-Type", "application/json");

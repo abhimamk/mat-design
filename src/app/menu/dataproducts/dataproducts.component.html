@@ -1,5 +1,5 @@
 <span class="flex-spacer"></span>
-<a mat-button (click)="openLoginForm()" style="color: blanchedalmond;"><span class="fa fa-sign-in fa-lg"></span> ADD</a>
+<a mat-button (click)="onOpensave()" style="color: blanchedalmond;"><span class="fa fa-sign-in fa-lg"></span> ADD</a>
 <div class="container-fliud">
 <div class="col-md-3">
   <app-sidebar [categoryName]="name" (jinal)="onSideBarClick($event)"></app-sidebar>
@@ -21,7 +21,7 @@
           <p>{{item.pro_price | currency:'INR' }}</p>
           <p>
             <a (click)="onProductDelete(item)" class="btn btn-primary" role="button">Delete</a>
-            <a (click)="onProductEdit(item)" class="btn btn-primary" role="button">Edit</a>
+            <a (click)="onopenedit(item.pro_id)" class="btn btn-primary" role="button">Edit</a>
           </p>
         </div>
       </div>

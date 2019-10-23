@@ -1,3 +1,4 @@
+import { EditproductComponent } from './../editproduct/editproduct.component';
 import { ProductaddComponent } from './../productadd/productadd.component';
 import { GetservService } from './../../services/getserv.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,6 +21,7 @@ export class DataproductsComponent implements OnInit {
     this._data.getAllProducts().subscribe(
       (data: Product[]) => {
         this.arr = data;
+        console.log(data);
         // this.loading=false;
       },
       function(error) {
@@ -28,10 +30,17 @@ export class DataproductsComponent implements OnInit {
       function() {}
     );
   }
-  openLoginForm()
+  onOpensave()
   {
     this.dialog.open(ProductaddComponent,{width:'1000px', height:'550px'})
     console.log("click");
+  }
+  onopenedit(id:number){
+    console.log(id);
+      this.dialog.open(EditproductComponent,{width:'1000px', height:'550px', data: {
+        dataKey: id
+      }})
+      console.log("click");
   }
   onProductDelete(item: Product) {
     this._data.deleteProduct(item.pro_id).subscribe((data: any) => {
@@ -39,9 +48,9 @@ export class DataproductsComponent implements OnInit {
       alert("deleted");
     });
   }
-  onProductEdit(item:Product){
-    this._router.navigate(['/product/editproduct',item.pro_id]);
-  }
+  // onProductEdit(item:Product){
+  //   this._router.navigate(['/product/editproduct',item.pro_id]);
+  // }
   onSideBarClick(value) {
     if (value != "") {
       this.arr = this.arr.filter(x => x.pro_name.indexOf(value) != -1);

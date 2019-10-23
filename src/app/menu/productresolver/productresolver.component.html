@@ -1,8 +1,11 @@
 <div class="container-fliud">
+    <div class="input-group no-border">
+        <input type="search" #input1 (keyup)="0"  placeholder="Search by name..." >&nbsp;
+    </div>
    <div class="col-md-9">
-    <h1 style="color: rgb(49, 226, 43);">Product Display</h1>
+    <h1 style="color: rgb(49, 226, 43);" class="a">Product Display using resolver</h1>
     <div class="row">
-      <div class="col-sm-4 col-md-4" *ngFor="let item of arr">
+      <div class="col-sm-4 col-md-4" *ngFor="let item of arr | filter:input1.value;">
         <div class="thumbnail">
           <img [src]="item.pro_img" height="200px" width="200px" alt="...">
           <div class="caption">
