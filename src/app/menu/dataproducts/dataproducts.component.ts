@@ -15,7 +15,9 @@ export class DataproductsComponent implements OnInit {
   arr: Product[] = [];
   name: string = "watch";
   // loading:boolean=true;
-  constructor(private _data: GetservService,private _router:Router,public dialog:MatDialog) { }
+  constructor(private _data: GetservService,private _router:Router,public dialog:MatDialog) {
+    this.ngOnInit();
+  }
   ngOnInit() {
     // this.loading=true;
     this._data.getAllProducts().subscribe(

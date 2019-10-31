@@ -1,7 +1,7 @@
 import { UserdataService } from './../../services/userdata.service';
 import { GetservService } from './../../services/getserv.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from "@angular/forms";
+import { FormGroup, FormBuilder, FormControl, NgForm } from "@angular/forms";
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -22,7 +22,8 @@ export class LoginComponent implements OnInit {
       user_password: new FormControl()
     });
   }
-  onLoginSubmit() {
+  onLoginSubmit(f:NgForm) {
+    console.log(f.value);
     this._userdata.login(
       this.login.value.user_email,
       this.login.value.user_password

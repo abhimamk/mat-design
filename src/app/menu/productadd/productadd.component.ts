@@ -19,7 +19,7 @@ export class ProductaddComponent implements OnInit {
     this._data.addProduct(f.value).subscribe((data: any) => {
       this.dialogRef.close(f.value);
        window.location.reload();
-      console.log(data);
+       console.log(data);
       // this._data.getAllProducts().subscribe((x:any)=>{
       //   this.y=x;
       //   this.emit1.emit(this.y);

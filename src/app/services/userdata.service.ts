@@ -32,7 +32,7 @@ export class UserdataService {
   logout() {
     this.currentUser = null;
     this.redirectURL = "";
-    this._router.navigate([""]);
+    this._router.navigate(["/login"]);
   }
   get isLoggedIn(): boolean {
     return !!this.currentUser;

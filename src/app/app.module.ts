@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -20,6 +21,7 @@ import { ProductaddComponent } from './menu/productadd/productadd.component';
 import { EditproductComponent } from './menu/editproduct/editproduct.component';
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import { LoginComponent } from './menu/login/login.component';
+import { HomeComponent } from './menu/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { LoginComponent } from './menu/login/login.component';
     ProductaddComponent,
     EditproductComponent,
     LoginComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -41,6 +44,7 @@ import { LoginComponent } from './menu/login/login.component';
     HttpClientModule,
     Product1Module,
     UsersModule,
+    RouterModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
     NgMatSearchBarModule,

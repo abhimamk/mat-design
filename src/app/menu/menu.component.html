@@ -1,15 +1,17 @@
 <mat-toolbar id="mainToolbar"  style="background-image:url('https://image.freepik.com/free-vector/yellow-light-line-shadow-dark-grey-luxury-background_33869-978.jpg') ;">
   <mat-icon
-  (click)='sidenav.toggle()'
+  (click)="onToolbarMenuToggle()"
     id="toolbarMenu">subject</mat-icon>
   AMK
   <span class="toolbar-spacer"></span>
-  <mat-icon
+  <!-- <mat-icon
     class="toolbar-icon"
     matBadge="8"
     matBadgePosition="after"
     matBadgeColor="accent"
-  >notifications</mat-icon>
+  >notifications</mat-icon> -->
+  <li *ngIf="!isLoggedIn()" routerLinkActive="active"><a  routerLink="login"><span class="fa fa-sign-in fa-lg"></span> Login</a></li>
+  <li *ngIf="isLoggedIn()" class="point" routerLinkActive="active"><a (click)="onLogOut()" >Log Out</a></li>
 </mat-toolbar>
 
 <mat-sidenav-container
@@ -36,7 +38,7 @@
         </mat-card-header>
       </mat-card>
       <mat-list-item *ngIf="isLoggedIn()">
-        <button (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="dash"
+        <button   routerLinkActive="active"  routerLink="dash"
         class="menu-item"
           mat-flat-button>
           <mat-icon>dashboard</mat-icon>
@@ -45,7 +47,7 @@
       </mat-list-item>
 
       <mat-list-item *ngIf="isLoggedIn()">
-          <button (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="Table"
+          <button   routerLinkActive="active"  routerLink="Table"
           class="menu-item"
             mat-flat-button>
             <mat-icon>work</mat-icon>
@@ -54,7 +56,7 @@
         </mat-list-item>
 
          <mat-list-item *ngIf="isLoggedIn()">
-            <button  (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="dataproducts"
+            <button    routerLinkActive="active"  routerLink="dataproducts"
             class="menu-item"
               mat-flat-button>
               <mat-icon>rounded_corner</mat-icon>
@@ -63,7 +65,7 @@
           </mat-list-item>
 
           <mat-list-item *ngIf="isLoggedIn()">
-            <button (click)='sidenav.toggle()'  routerLinkActive="active"  routerLink="ProReslover"
+            <button  routerLinkActive="active"  routerLink="ProReslover"
             class="menu-item"
               mat-flat-button>
               <mat-icon>rounded_corner</mat-icon>
@@ -71,16 +73,19 @@
 
           </mat-list-item>
           <mat-list-item *ngIf="isLoggedIn()">
-            <button  (click)='sidenav.toggle()' routerLinkActive="active"  routerLink="userreslover"
+            <button   routerLinkActive="active"  routerLink="userreslover"
             class="menu-item"
               mat-flat-button>
               <mat-icon>rounded_corner</mat-icon>
             user</button>
 
           </mat-list-item>
-          <li *ngIf="!isLoggedIn()" routerLinkActive="active"><a  routerLink="/login"><span class="fa fa-sign-in fa-lg"></span> Login</a></li>
-          <li *ngIf="isLoggedIn()" class="point" routerLinkActive="active"><a (click)="onLogOut()" >Log Out</a></li>
+
     </mat-list>
   </mat-sidenav>
+  <mat-sidenav-content
+  [ngStyle]="{ 'margin-left.px': contentMargin }"
+  >
   <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
