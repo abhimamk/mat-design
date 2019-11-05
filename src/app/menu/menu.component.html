@@ -10,8 +10,8 @@
     matBadgePosition="after"
     matBadgeColor="accent"
   >notifications</mat-icon> -->
-  <li *ngIf="!isLoggedIn()" routerLinkActive="active"><a  routerLink="login"><span class="fa fa-sign-in fa-lg"></span> Login</a></li>
-  <li *ngIf="isLoggedIn()" class="point" routerLinkActive="active"><a (click)="onLogOut()" >Log Out</a></li>
+  <li *ngIf="!isLoggedIn()" routerLinkActive="active"><a  routerLink=""><span class="fa fa-sign-in fa-lg"></span> Login</a></li>
+  <li *ngIf="isLoggedIn()" class="point" routerLinkActive="active"><a (click)="onLogOut()" ><i class="fa fa-sign-out"></i>Logout</a></li>
 </mat-toolbar>
 
 <mat-sidenav-container

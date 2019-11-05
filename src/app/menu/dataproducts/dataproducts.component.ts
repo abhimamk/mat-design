@@ -1,5 +1,5 @@
-import { EditproductComponent } from './../editproduct/editproduct.component';
-import { ProductaddComponent } from './../productadd/productadd.component';
+import { EditproductComponent } from './editproduct/editproduct.component';
+import { ProductaddComponent } from './productadd/productadd.component';
 import { GetservService } from './../../services/getserv.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -14,6 +14,7 @@ import { MatDialog } from '@angular/material';
 export class DataproductsComponent implements OnInit {
   arr: Product[] = [];
   name: string = "watch";
+
   // loading:boolean=true;
   constructor(private _data: GetservService,private _router:Router,public dialog:MatDialog) {
     this.ngOnInit();
@@ -45,10 +46,20 @@ export class DataproductsComponent implements OnInit {
       console.log("click");
   }
   onProductDelete(item: Product) {
+    var x = confirm("Are you sure you want to delete?");
+    if (x){
     this._data.deleteProduct(item.pro_id).subscribe((data: any) => {
       this.arr.splice(this.arr.indexOf(item), 1);
       alert("deleted");
     });
+        return true;
+  }
+    else
+    {
+      return false;
+    }
+
+
   }
   // onProductEdit(item:Product){
   //   this._router.navigate(['/product/editproduct',item.pro_id]);

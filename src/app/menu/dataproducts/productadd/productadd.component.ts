@@ -1,5 +1,5 @@
-import { Product } from './../../classes/product';
-import { GetservService } from './../../services/getserv.service';
+import { Product } from '../../../classes/product';
+import { GetservService } from '../../../services/getserv.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 

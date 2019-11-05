@@ -9,29 +9,32 @@ import { MaterialModule } from './material-module';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './menu/dashboard/dashboard.component';
 import { ProductsComponent } from './menu/products/products.component';
-import { DataproductsComponent } from './menu/dataproducts/dataproducts.component';
+// import { DataproductsComponent } from './menu/dataproducts/dataproducts.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './menu/sidebar/sidebar.component';
+// import { SidebarComponent } from './menu/sidebar/sidebar.component';
 import { Product1Module } from './menu/productresolver/productresv.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UsersModule } from './menu/users/users.module';
-import { ProductaddComponent } from './menu/productadd/productadd.component';
-import { EditproductComponent } from './menu/editproduct/editproduct.component';
+// import { ProductaddComponent } from './menu/dataproducts/productadd/productadd.component';
+// import { EditproductComponent } from './menu/dataproducts/editproduct/editproduct.component';
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import { LoginComponent } from './menu/login/login.component';
 import { HomeComponent } from './menu/home/home.component';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import { ProductModule } from './menu/dataproducts/product.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     DashboardComponent,
     ProductsComponent,
-    DataproductsComponent,
-    SidebarComponent,
-    ProductaddComponent,
-    EditproductComponent,
+    // DataproductsComponent,
+    // SidebarComponent,
+    // ProductaddComponent,
+    // EditproductComponent,
     LoginComponent,
     HomeComponent,
 
@@ -57,11 +60,14 @@ import { HomeComponent } from './menu/home/home.component';
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
 
+    }),
+    ConfirmationPopoverModule.forRoot({
+      confirmButtonType:'danger'
     })
 
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ProductaddComponent,EditproductComponent]
+  // entryComponents: [ProductaddComponent,EditproductComponent]
 })
 export class AppModule { }

@@ -12,11 +12,13 @@ import { LoginComponent } from './menu/login/login.component';
 import { UserGuardService } from './services/user-guard.service';
 
 const routes: Routes = [
-  {path:'login',component:LoginComponent,},
-  {path:'',component:HomeComponent},
+  {path:'',component:LoginComponent,},
+  {path:'dataproducts',canLoad:[UserGuardService],loadChildren:'./menu/dataproducts/product.module#ProductModule'},
+  {path:'home',component:HomeComponent},
    {path: 'dash', component: DashboardComponent},
    {path: 'Table', component: ProductsComponent},
-   {path:'dataproducts',canLoad:[UserGuardService],component:DataproductsComponent},
+
+  //  {path:'dataproducts',component:DataproductsComponent},
   //  {path:'ProReslover',resolve:{pdata:ProductresloverServService},component:ProductresolverComponent},
 ];
 

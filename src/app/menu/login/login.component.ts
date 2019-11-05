@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     // if (this._userdata.redirectURL) {
     //   this._router.navigateByUrl(this._userdata.redirectURL);
     // } else {
-      this._router.navigate(["/"]);
+      this._router.navigate(["/dash"]);
     //}
   }
 }

@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
   }
   onLogOut(){
     this._userdata.logout();
-    this._r.navigate(['/login']);
+    this._r.navigate(['/']);
   }
   isLoggedIn(){
     return this._userdata.isLoggedIn;

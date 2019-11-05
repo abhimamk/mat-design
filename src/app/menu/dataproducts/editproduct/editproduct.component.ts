@@ -1,10 +1,10 @@
-import { GetservService } from './../../services/getserv.service';
+import { GetservService } from '../../../services/getserv.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/classes/product';
 import { FormGroup, FormBuilder, NgForm } from '@angular/forms';
 import { Inject } from '@angular/core'
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material'
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 
 @Component({

@@ -21,8 +21,10 @@ export class UserdataService {
         password: user_password,
         isAdmin: true
       };
-      return;
     }
+    // else{
+    //   alert("check username and password");
+    // }
     this.currentUser = {
       user_email: user_email,
       password: user_password,
@@ -32,7 +34,7 @@ export class UserdataService {
   logout() {
     this.currentUser = null;
     this.redirectURL = "";
-    this._router.navigate(["/login"]);
+    this._router.navigate(["/"]);
   }
   get isLoggedIn(): boolean {
     return !!this.currentUser;
