@@ -4,6 +4,7 @@ import { product1routing } from './productresv.routing';
 import { ProductresolverComponent } from './productresolver.component';
 import { FilterPipe } from 'src/app/searchCustomFilterpipe/filter.pipe';
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+import { MaterialModule } from 'src/app/material-module';
 @NgModule({
   declarations:[
     ProductresolverComponent,
@@ -12,7 +13,9 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
   imports:[
     CommonModule,
     product1routing,
-    NgMatSearchBarModule
+    NgMatSearchBarModule,
+    MaterialModule
+
 
   ]
 })

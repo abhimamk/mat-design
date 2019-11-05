@@ -8,7 +8,7 @@ import { UserdataService } from '../services/userdata.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  isMenuOpen = true;
+  isMenuOpen = false;
   contentMargin = 240;
 
 

@@ -25,7 +25,7 @@ isUserLoggedIn(url:string):boolean{
     return true;
   }
   this._userdata.redirectURL=url;
-  this._router.navigate(['/login']);
+  this._router.navigate(['/']);
   return false;
 }
 }

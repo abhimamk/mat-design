@@ -7,8 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
 import { MaterialModule } from './material-module';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './menu/dashboard/dashboard.component';
-import { ProductsComponent } from './menu/products/products.component';
+// import { DashboardComponent } from './menu/dashboard/dashboard.component';
+// import { ProductsComponent } from './menu/products/products.component';
 // import { DataproductsComponent } from './menu/dataproducts/dataproducts.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { SidebarComponent } from './menu/sidebar/sidebar.component';
@@ -29,8 +29,8 @@ import { ProductModule } from './menu/dataproducts/product.module';
   declarations: [
     AppComponent,
     MenuComponent,
-    DashboardComponent,
-    ProductsComponent,
+    // DashboardComponent,
+    // ProductsComponent,
     // DataproductsComponent,
     // SidebarComponent,
     // ProductaddComponent,
